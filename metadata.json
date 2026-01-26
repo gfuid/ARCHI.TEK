@@ -1,0 +1,8 @@
+{
+  "name": "ARCHI-TEK | Modern Architectural Studio",
+  "description": "A high-end architectural portfolio and design studio platform featuring a Gemini-powered AI design consultant for structural and aesthetic brainstorming.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCHI-TEK | Modern Architectural Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            colors: {
+              studio: {
+                black: '#0a0a0a',
+                white: '#f5f5f5',
+                gold: '#c5a059',
+                gray: '#1a1a1a'
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 1s ease-out forwards',
+              'slide-up': 'slideUp 0.8s ease-out forwards',
+              'slow-pulse': 'slowPulse 10s ease-in-out infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { transform: 'translateY(30px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+              slowPulse: {
+                '0%, 100%': { transform: 'scale(1)' },
+                '50%': { transform: 'scale(1.05)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a0a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1a1a1a;
+        border-radius: 0px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #c5a059;
+      }
+      html {
+        scroll-behavior: smooth;
+        cursor: none; /* Hide default cursor for the custom one */
+      }
+      body {
+        cursor: none;
+      }
+      a, button, [role="button"] {
+        cursor: none;
+      }
+      /* Ensure images load gracefully */
+      img {
+        transition: opacity 0.5s ease-in-out;
+      }
+      img:not([src]) {
+        opacity: 0;
+      }
+      .perspective-card {
+        perspective: 1000px;
+      }
+      .glass-panel {
+        background: rgba(10, 10, 10, 0.7);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "three": "https://esm.sh/three@0.160.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-studio-black text-studio-white font-sans antialiased overflow-x-hidden">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
