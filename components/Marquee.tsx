@@ -2,33 +2,24 @@
 import React from 'react';
 
 const Marquee: React.FC = () => {
-  const words = ["STRUCTURAL INTEGRITY", "DIGITAL INNOVATION", "POETIC MINIMALISM", "HERITAGE CRAFT"];
+  const words = ["CONSTRUCTION", "INTERIOR WORK", "TURNKEY PROJECTS", "RENOVATION", "SITE MASTERY"];
   
   return (
-    <div className="bg-studio-gold py-8 overflow-hidden whitespace-nowrap border-y border-studio-black/10">
+    <div className="bg-houzz-sage/10 py-10 overflow-hidden whitespace-nowrap border-y border-houzz-sage/20">
       <div className="flex animate-marquee">
         {[...Array(4)].map((_, i) => (
           <div key={i} className="flex items-center">
             {words.map((word, idx) => (
               <React.Fragment key={idx}>
-                <span className="text-studio-black text-6xl md:text-8xl font-serif font-bold tracking-tighter mx-12">
+                <span className="text-houzz-dark text-5xl md:text-7xl font-serif font-bold tracking-tighter mx-16 opacity-10 hover:opacity-100 transition-opacity cursor-default">
                   {word}
                 </span>
-                <span className="w-4 h-4 rounded-full bg-studio-black"></span>
+                <span className="w-3 h-3 rounded-full bg-houzz-gold"></span>
               </React.Fragment>
             ))}
           </div>
         ))}
       </div>
-      <style>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-marquee {
-          animation: marquee 40s linear infinite;
-        }
-      `}</style>
     </div>
   );
 };
