@@ -4,10 +4,16 @@ import Magnetic from './Magnetic';
 
 const SERVICES = [
   {
-    id: 'construction',
-    title: 'Construction',
-    desc: 'Complete civil and structural development with architectural precision.',
-    image: 'https://images.unsplash.com/photo-1503387762-592dea58ef23?q=80&w=1200&auto=format&fit=crop'
+    id: 'commercial-construction',
+    title: 'Commercial Construction',
+    desc: 'Scalable structural solutions and high-specification builds designed for operational excellence and long-term asset value.',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop'
+  },
+  {
+    id: 'interior-fitout',
+    title: 'Interior & Fit-Out',
+    desc: 'Bespoke interior architecture and turnkey fit-outs that harmonize workplace ergonomics with premium brand aesthetics.',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop'
   },
   {
     id: 'interior',
@@ -26,6 +32,12 @@ const SERVICES = [
     title: 'Renovation',
     desc: 'Breathe new life into existing structures with modern architectural standards.',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop'
+  },
+  {
+    id: 'luxury-residential',
+    title: 'Residential Development',
+    desc: 'High-end residential construction specializing in custom estates and sophisticated multi-family dwellings with a focus on sustainable luxury.',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop'
   }
 ];
 
@@ -43,7 +55,7 @@ const Services: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {SERVICES.map((service, idx) => (
-            <div 
+            <div
               key={service.id}
               onMouseEnter={() => setActiveIdx(idx)}
               onMouseLeave={() => setActiveIdx(null)}
@@ -61,10 +73,10 @@ const Services: React.FC = () => {
 
               {/* Hover Image Reveal */}
               <div className={`absolute inset-0 bg-houzz-dark z-0 transform transition-transform duration-1000 ease-in-out ${activeIdx === idx ? 'translate-y-0' : 'translate-y-full'}`}>
-                <img 
-                  src={service.image} 
-                  className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale" 
-                  alt={service.title} 
+                <img
+                  src={service.image}
+                  className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale"
+                  alt={service.title}
                 />
               </div>
             </div>
