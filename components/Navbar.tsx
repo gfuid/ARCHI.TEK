@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Magnetic from './Magnetic';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.jpeg';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
