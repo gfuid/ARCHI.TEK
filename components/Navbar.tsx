@@ -15,44 +15,45 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
+    // ... rest of the code remains the same
+
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? 'glass-nav py-4 shadow-sm' : 'bg-transparent py-8'
       }`}>
-      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      {/* 1. Added 'relative' to the container to allow absolute positioning for the mobile button */}
+      <div className="max-w-7xl mx-auto px-6 flex justify-center md:justify-between items-center relative">
+
         <Magnetic strength={0.2}>
+          {/* 2. Added 'md:origin-left' so it scales from the corner on desktop but the center on mobile */}
           <a href="#" className="flex items-center group">
             <img
               src={logo}
               alt="Logo"
-              // Changed transition-transform to transition-all to be safe
-              // Replaced scale-200 with scale-[2.0] (2x size)
-              className={`h-16 w-auto transition-all duration-500 ease-in-out ${isScrolled
-                ? 'scale-250'      // Size when scrolling down
-                : 'scale-[2.8]'    // Large size when at the top
+              className={`h-16 w-auto transition-all duration-500 ease-in-out origin-center md:origin-left ${isScrolled ? 'scale-100' : 'scale-[1.8] md:scale-[2.2]'
                 }`}
             />
           </a>
         </Magnetic>
 
+        {/* Desktop Navigation (Stays hidden on mobile) */}
         <div className="hidden md:flex space-x-10 text-[11px] font-bold tracking-[0.2em] uppercase items-center">
           {['Services', 'Site Pics', 'About', 'Contact'].map((item) => (
             <Magnetic key={item} strength={0.3}>
-              <a
-                href={`#${item.toLowerCase().replace(' ', '-')}`}
-                className="text-houzz-dark/60 hover:text-houzz-gold transition-colors px-2 py-1"
-              >
+              <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="...">
                 {item}
               </a>
             </Magnetic>
           ))}
         </div>
 
+        {/* Consult Button (Hidden on mobile) */}
         <Magnetic strength={0.2}>
-          <button className="hidden lg:block bg-houzz-gold text-white px-8 py-2 rounded-sm text-[10px] font-bold uppercase tracking-widest transition-all hover:bg-houzz-dark shadow-lg shadow-houzz-gold/20">
+          <button className="hidden lg:block ...">
             Consult Now
           </button>
         </Magnetic>
 
-        <button className="md:hidden text-houzz-dark">
+        {/* 3. Mobile Menu Button - Added 'absolute right-6' to keep it at the edge while logo centers */}
+        <button className="md:hidden text-houzz-dark absolute right-6">
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
           </svg>

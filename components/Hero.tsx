@@ -1,12 +1,7 @@
-
 import React, { useState, useEffect } from 'react';
-//import logo from '../assets/logo.png';
+import logo from '../assets/logo.png';
 
 const SLIDES = [
-  // {
-  //   image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop',
-  //   title: 'Precision Build',
-  // },
   {
     image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop',
     title: 'Interior Mastery',
@@ -29,10 +24,10 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-white">
-      {/* Curved Sage Background (Matches the card) */}
+      {/* Curved Sage Background */}
       <div className="absolute top-0 left-0 right-0 h-[65%] bg-houzz-sage curved-bg z-0 origin-top"></div>
 
-      {/* Image Slider - Light/Transparent Treatment */}
+      {/* Image Slider */}
       <div className="absolute inset-0 z-10 flex items-center justify-center opacity-40">
         {SLIDES.map((slide, index) => (
           <div
@@ -50,22 +45,25 @@ const Hero: React.FC = () => {
         ))}
       </div>
 
+      {/* Main Content Area */}
       <div className="relative z-30 text-center px-6 max-w-4xl">
-        {/* <div className="mb-8 inline-block animate-fade-in"> */}
-        {/* Official Brand Logo Replacement */}
-        {/* <div className="mb-12 flex flex-col items-center">
+        <div className="mb-8 inline-block animate-fade-in">
+
+          {/* Logo: Hidden on mobile, block on medium screens+ */}
+          <div className="hidden md:flex mb-12 flex-col items-center">
             <img
               src={logo}
               alt="Brand Logo"
               className="h-32 md:h-48 w-auto transition-transform duration-500 hover:scale-105"
             />
+          </div>
 
-          </div> */}
+          {/* Gold Line: Also hidden on mobile to maintain spacing */}
+          <div className="hidden md:block w-48 h-[3px] bg-houzz-gold mx-auto mb-8"></div>
+        </div>
 
-        {/* <div className="w-48 h-[3px] bg-houzz-gold mx-auto mb-8"></div> */}
-        {/* </div> */}
-
-        <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12 text-houzz-dark font-bold text-[10px] md:text-xs tracking-[0.3em] uppercase animate-slide-up">
+        {/* Categories: Visible on both, but stacked on mobile */}
+        <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 text-houzz-dark font-bold text-[11px] md:text-xs tracking-[0.3em] uppercase animate-slide-up">
           <span className="hover:text-houzz-gold transition-colors cursor-default">Construction</span>
           <span className="hidden md:block text-houzz-gold/40">•</span>
           <span className="hover:text-houzz-gold transition-colors cursor-default">Interior Work</span>
@@ -76,6 +74,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
+      {/* Scroll Indicator */}
       <div className="absolute bottom-12 z-30 animate-bounce">
         <a href="#services" className="text-houzz-gold hover:text-houzz-dark transition-colors">
           <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
