@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import logo from '../assets/logo.jpeg';
+//import logo from '../assets/logo.png';
 
 const SLIDES = [
   // {
@@ -51,19 +51,19 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative z-30 text-center px-6 max-w-4xl">
-        <div className="mb-8 inline-block animate-fade-in">
-          {/* Official Brand Logo Replacement */}
-          <div className="mb-12 flex flex-col items-center">
+        {/* <div className="mb-8 inline-block animate-fade-in"> */}
+        {/* Official Brand Logo Replacement */}
+        {/* <div className="mb-12 flex flex-col items-center">
             <img
               src={logo}
               alt="Brand Logo"
               className="h-32 md:h-48 w-auto transition-transform duration-500 hover:scale-105"
             />
 
-          </div>
+          </div> */}
 
-          <div className="w-48 h-[3px] bg-houzz-gold mx-auto mb-8"></div>
-        </div>
+        {/* <div className="w-48 h-[3px] bg-houzz-gold mx-auto mb-8"></div> */}
+        {/* </div> */}
 
         <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-12 text-houzz-dark font-bold text-[10px] md:text-xs tracking-[0.3em] uppercase animate-slide-up">
           <span className="hover:text-houzz-gold transition-colors cursor-default">Construction</span>

@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Magnetic from './Magnetic';
-import logo from '../assets/logo.jpeg';
+import logo from '../assets/logo.png';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -23,7 +23,11 @@ const Navbar: React.FC = () => {
             <img
               src={logo}
               alt="Logo"
-              className={`w-auto transition-all duration-300 ${isScrolled ? 'h-12' : 'h-16'
+              // Changed transition-transform to transition-all to be safe
+              // Replaced scale-200 with scale-[2.0] (2x size)
+              className={`h-16 w-auto transition-all duration-500 ease-in-out ${isScrolled
+                ? 'scale-250'      // Size when scrolling down
+                : 'scale-[2.8]'    // Large size when at the top
                 }`}
             />
           </a>
