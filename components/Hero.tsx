@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import logo from '../assets/logo.png';
 
 const SLIDES = [
   {
@@ -10,6 +9,18 @@ const SLIDES = [
     image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop',
     title: 'Turnkey Design',
   }
+];
+
+// Client ke notes se liye gaye 8 names
+const CLIENT_SERVICES = [
+  "Residential Construction",
+  "Commercial Construction",
+  "Interior Work",
+  "Turnkey Projects",
+  "Renovation",
+  "Planning Layout 2D/3D",
+  "3D Visualization",
+  "PMC Works"
 ];
 
 const Hero: React.FC = () => {
@@ -24,18 +35,17 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-white">
-      {/* Curved Sage Background */}
-      <div className="absolute top-0 left-0 right-0 h-[65%] bg-houzz-sage curved-bg z-0 origin-top"></div>
+      {/* Curved Background */}
+      <div className="absolute top-0 left-0 right-0 h-[65%] bg-houzz-sage/20 z-0 origin-top"></div>
 
       {/* Image Slider */}
-      <div className="absolute inset-0 z-10 flex items-center justify-center opacity-40">
+      <div className="absolute inset-0 z-10 flex items-center justify-center opacity-30">
         {SLIDES.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-[2000ms] ${index === current ? 'opacity-100' : 'opacity-0'
-              }`}
+            className={`absolute inset-0 transition-opacity duration-[2000ms] ${index === current ? 'opacity-100' : 'opacity-0'}`}
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-houzz-sage/50 to-white/95"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-white"></div>
             <img
               src={slide.image}
               alt={slide.title}
@@ -46,39 +56,30 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="relative z-30 text-center px-6 max-w-4xl">
-        <div className="mb-8 inline-block animate-fade-in">
+      <div className="relative z-30 text-center w-full">
 
-          {/* Logo: Hidden on mobile, block on medium screens+ */}
-          <div className="hidden md:flex mb-12 flex-col items-center">
-            <img
-              src={logo}
-              alt="Brand Logo"
-              className="h-32 md:h-48 w-auto transition-transform duration-500 hover:scale-105"
-            />
+
+        {/* --- INFINITE AUTO-SLIDER (MARQUEE) --- */}
+        <div className="relative flex overflow-x-hidden border-y border-houzz-gold/20 py-6 bg-white/50 backdrop-blur-sm mt-[200px]">
+          <div className="animate-marquee whitespace-nowrap flex items-center">
+            {/* Array ko 2 baar repeat kiya taaki seamless loop bane */}
+            {[...CLIENT_SERVICES, ...CLIENT_SERVICES].map((service, index) => (
+              <React.Fragment key={index}>
+                <span className="mx-8 text-houzz-dark font-bold text-[10px] md:text-xs tracking-[0.3em] uppercase hover:text-houzz-gold transition-colors cursor-default">
+                  {service}
+                </span>
+                <span className="text-houzz-gold/40">•</span>
+              </React.Fragment>
+            ))}
           </div>
-
-          {/* Gold Line: Also hidden on mobile to maintain spacing */}
-          <div className="hidden md:block w-48 h-[3px] bg-houzz-gold mx-auto mb-8"></div>
-        </div>
-
-        {/* Categories: Visible on both, but stacked on mobile */}
-        <div className="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 text-houzz-dark font-bold text-[11px] md:text-xs tracking-[0.3em] uppercase animate-slide-up">
-          <span className="hover:text-houzz-gold transition-colors cursor-default">Construction</span>
-          <span className="hidden md:block text-houzz-gold/40">•</span>
-          <span className="hover:text-houzz-gold transition-colors cursor-default">Interior Work</span>
-          <span className="hidden md:block text-houzz-gold/40">•</span>
-          <span className="hover:text-houzz-gold transition-colors cursor-default">Turnkey Projects</span>
-          <span className="hidden md:block text-houzz-gold/40">•</span>
-          <span className="hover:text-houzz-gold transition-colors cursor-default">Renovation</span>
         </div>
       </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-12 z-30 animate-bounce">
-        <a href="#services" className="text-houzz-gold hover:text-houzz-dark transition-colors">
-          <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        <a href="#services" className="text-houzz-gold">
+          <svg className="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </a>
       </div>
