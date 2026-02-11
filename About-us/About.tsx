@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Magnetic from './Magnetic';
+import img from "./../assets/image.png"
 
 const TEAM = [
     {
@@ -51,7 +52,7 @@ const About: React.FC = () => {
                     </motion.div>
 
                     <div className="grid grid-cols-2 gap-4">
-                        <img src="https://images.unsplash.com/photo-1503387762-592f2416460a?q=80&w=600" alt="Planning" className="w-full h-64 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-700" />
+                        <img src={img} alt="Planning" className="w-full h-64 object-cover rounded-sm grayscale hover:grayscale-0 transition-all duration-700" />
                         <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=600" alt="Site Work" className="w-full h-64 object-cover rounded-sm mt-12 grayscale hover:grayscale-0 transition-all duration-700" />
                     </div>
                 </div>

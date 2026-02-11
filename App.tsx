@@ -7,6 +7,7 @@ import Process from './components/Process';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import Marquee from './components/Marquee';
+import WhyChooseUs from './components/WhyChooseUs';
 
 // Naye folders se components
 import Portfoliositepic from './sitepic/Portfolio';
@@ -28,6 +29,7 @@ const App: React.FC = () => {
               <Marquee />
               <Services />
               <Process />
+              <WhyChooseUs />
             </main>
           } />
 

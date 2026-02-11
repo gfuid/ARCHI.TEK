@@ -5,7 +5,7 @@ import Magnetic from './Magnetic';
 import logo from '../assets/logo.png';
 
 const PREVIEW_IMAGES = [
-  { title: "Residential", url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=400" },
+  { title: "PMC ", url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=400" },
   { title: "Commercial", url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=400" },
   { title: "Interior", url: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=400" },
 ];
@@ -39,8 +39,8 @@ const Navbar: React.FC = () => {
                 src={logo}
                 alt="Logo"
                 className={`w-auto transition-all duration-700 ease-in-out origin-left ${isScrolled
-                    ? 'h-10 md:h-12 scale-100' // Scrolled size
-                    : 'h-14 md:h-20 scale-110' // Initial size (Increased for mobile)
+                  ? 'h-10 md:h-12 scale-100' // Scrolled size
+                  : 'h-14 md:h-20 scale-110' // Initial size (Increased for mobile)
                   }`}
               />
             </Link>

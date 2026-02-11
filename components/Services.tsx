@@ -29,13 +29,19 @@ const SERVICES = [
     id: 'pmc-works',
     title: 'PMC Works',
     desc: 'Professional Project Management Consultancy ensuring quality, safety, and timely delivery of your projects.',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=1200&auto=format&fit=crop'
+    image: 'https://images.unsplash.com/photo-1503387762-592f2416460a?q=80&w=1200&auto=format&fit=crop'
   },
   {
     id: 'renovation',
     title: 'Renovation',
     desc: 'Modernizing existing structures with the latest architectural standards and high-quality materials.',
     image: 'https://images.unsplash.com/photo-1503387837-b154d5074bd2?q=80&w=1200&auto=format&fit=crop'
+  },
+  {
+    id: 'Residential Construction',
+    title: 'Residential Construction',
+    desc: 'Expertise in building luxurious and structurally sound residential properties tailored to your lifestyle.',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop'
   }
 ];
 
