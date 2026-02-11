@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ShieldCheck, Ruler, Coins, HardHat } from 'lucide-react'; // Humne lucide-react install kiya hai
-
+import i2 from './../assets/i2.png'
 const ROLES = [
   {
     title: "Project Planning",
@@ -73,7 +73,7 @@ const WhyChooseUs = () => {
           >
             <div className="aspect-[4/5] bg-gray-100 overflow-hidden rounded-sm relative z-10 shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=1000"
+                src={i2}
                 alt="Engineering Precision"
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
               />
