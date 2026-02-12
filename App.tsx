@@ -16,9 +16,11 @@ import Portfoliositepic from './sitepic/Portfolio';
 import AboutUsSection from './About-us/About';
 import Contact from './Contact-us/Contact';
 import ServicesPage from './Service/ServicesPage';
+import ScrollToTop from './components/ScrollToTop'
 const App: React.FC = () => {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-white">
         <CustomCursor />
         <Navbar />

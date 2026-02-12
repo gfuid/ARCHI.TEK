@@ -24,19 +24,17 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
 
-          {/* Brand & Identity Column */}
-          <div className="lg:col-span-5 flex flex-col items-start">
+          {/* Brand & Identity Column - Text Removed, Only Logo */}
+          <div className="lg:col-span-5 flex flex-col items-start justify-center">
             <Magnetic strength={0.1}>
-              <img
-                src={logo}
-                alt="DEI 23 SIGN HOUZZ"
-                className="h-16 w-auto mb-8 brightness-0 invert opacity-90 hover:opacity-100 transition-opacity"
-              />
+              <Link to="/">
+                <img
+                  src={logo}
+                  alt="DEI 23 SIGN HOUZZ"
+                  className="h-24 md:h-32 w-auto mb-8  "
+                />
+              </Link>
             </Magnetic>
-            <h2 className="text-3xl md:text-4xl font-serif font-bold tracking-tighter leading-none mb-6">
-              DEI<span className="text-[#C5A059]">23</span>SIGN <br />
-              <span className="text-white/90 uppercase text-2xl tracking-[0.2em] font-sans font-bold">HOUZZ</span>
-            </h2>
             <p className="text-[#C5A059] font-bold tracking-[0.4em] uppercase text-[10px] mb-6">
               Led by M.Tech Structural Engineers
             </p>

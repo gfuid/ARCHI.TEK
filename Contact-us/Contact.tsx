@@ -5,7 +5,7 @@ import Magnetic from "../components/Magnetic";
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact-us" className="py-20 bg-houzz-dark text-white overflow-hidden mt-12">
+    <section id="contact-us" className="py-20 bg-houzz-dark text-white overflow-hidden mt-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
 
