@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
       <div className="absolute top-0 left-0 right-0 h-[65%] bg-houzz-sage/20 z-0 origin-top"></div>
 
       {/* Image Slider */}
-      <div className="absolute inset-0 z-10 flex items-center justify-center opacity-30">
+      <div className="absolute inset-0 z-10 flex items-center justify-center opacity-75">
         {SLIDES.map((slide, index) => (
           <div
             key={index}
@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
 
 
         {/* --- INFINITE AUTO-SLIDER (MARQUEE) --- */}
-        <div className="relative flex overflow-x-hidden border-y border-houzz-gold/20 py-6 bg-white/50 backdrop-blur-sm mt-[200px]">
+        <div className="relative flex overflow-x-hidden border-y border-houzz-gold/20 py-6 bg-white/50 backdrop-blur-sm mt-[450px]">
           <div className="animate-marquee whitespace-nowrap flex items-center">
             {/* Array ko 2 baar repeat kiya taaki seamless loop bane */}
             {[...CLIENT_SERVICES, ...CLIENT_SERVICES].map((service, index) => (

@@ -30,7 +30,7 @@ const PROCESS_STEPS = [
 
 const Process: React.FC = () => {
   return (
-    <section className="py-24 bg-white">
+    <section id="key-roles" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16">
           <span className="text-houzz-gold font-bold uppercase tracking-widest text-xs mb-2 block">How We Work</span>

@@ -17,6 +17,7 @@ import AboutUsSection from './About-us/About';
 import Contact from './Contact-us/Contact';
 import ServicesPage from './Service/ServicesPage';
 import ScrollToTop from './components/ScrollToTop'
+import KeyRoles from './About-us/KeyRoles'
 const App: React.FC = () => {
   return (
     <Router>
@@ -45,6 +46,8 @@ const App: React.FC = () => {
           <Route path="/about" element={<AboutUsSection />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/services" element={<ServicesPage />} />
+          <Route path="/key-role" element={<KeyRoles />} />
+
         </Routes>
 
         <Footer />
