@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Magnetic from './Magnetic';
-import img from "./../assets/image.png"
+import img from "./../assets/i2.png"
 
 const TEAM = [
     {
@@ -26,7 +26,7 @@ const OTHER_STAFF = [
 
 const About: React.FC = () => {
     return (
-        <section id="about" className="py-32 bg-[#FBFBF9] overflow-hidden">
+        <section id="about" className="py-32 bg-[#FBFBF9] overflow-hidden mt-9">
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Intro Section */}

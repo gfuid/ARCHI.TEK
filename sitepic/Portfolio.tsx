@@ -45,7 +45,7 @@ const Portfolio: React.FC = () => {
         : PROJECTS.filter(p => p.category === filter);
 
     return (
-        <section id="site-pics" className="py-24 bg-white">
+        <section id="site-pics" className="py-24 bg-white mt-12">
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Filter Tabs */}

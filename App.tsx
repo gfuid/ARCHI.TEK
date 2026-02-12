@@ -8,12 +8,14 @@ import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import Marquee from './components/Marquee';
 import WhyChooseUs from './components/WhyChooseUs';
-
+import Team from './components/Team';
+import Stats from './components/Stats';
+import ContactSection from './components/ContactSection'
 // Naye folders se components
 import Portfoliositepic from './sitepic/Portfolio';
 import AboutUsSection from './About-us/About';
-import ContactSection from './Contact-us/Contact';
-
+import Contact from './Contact-us/Contact';
+import ServicesPage from './Service/ServicesPage';
 const App: React.FC = () => {
   return (
     <Router>
@@ -28,15 +30,19 @@ const App: React.FC = () => {
               <Hero />
               <Marquee />
               <Services />
+              <Stats />
               <Process />
               <WhyChooseUs />
+              <Team />
+              <ContactSection />
             </main>
           } />
 
           {/* ALAG PAGES: Jo aapne folders banaye hain */}
           <Route path="/site-pics" element={<Portfoliositepic />} />
           <Route path="/about" element={<AboutUsSection />} />
-          <Route path="/contact" element={<ContactSection />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<ServicesPage />} />
         </Routes>
 
         <Footer />

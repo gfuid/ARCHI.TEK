@@ -3,46 +3,60 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const SERVICES = [
   {
-    id: 'residential-commercial',
-    title: 'Construction',
-    desc: 'Expertise in both Residential and Commercial construction with a focus on structural integrity and modern aesthetics.',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop',
-    longDesc: 'Our construction wing, led by M.Tech Structural Engineers, ensures every project meets the highest stability standards. From foundations to superstructure, we handle every technical aspect with 10+ years of site experience.' //
+    id: 'residential-construction',
+    title: 'Residential Construction',
+    desc: 'Bespoke luxury home building with a focus on structural stability and high-end finishes.',
+    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200',
+    longDesc: 'Our residential wing is led by M.Tech Structural Engineers, ensuring that your dream home is as stable as it is beautiful. We manage the entire lifecycle from excavation to the final coat of paint.'
   },
   {
-    id: 'interior-works',
-    title: 'Interior & Fit-Out',
-    desc: 'Premium interior works and turnkey fit-outs designed to transform spaces into luxury experiences.',
-    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop',
-    longDesc: 'Transforming interiors into bespoke luxury spaces. We specialize in custom modular kitchens, lighting design, and premium wood finishes for high-end residential and commercial projects.'
+    id: 'commercial-construction',
+    title: 'Commercial Construction',
+    desc: 'Scalable structural solutions for corporate hubs, retail spaces, and industrial units.',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200',
+    longDesc: 'We deliver commercial spaces that evoke trust and stability. Our team handles complex glazing, large-span structural elements, and rapid deployment schedules.'
+  },
+  {
+    id: 'interior-work',
+    title: 'Interior Work',
+    desc: 'Premium interior fit-outs and turnkey finishing for residential and commercial interiors.',
+    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200',
+    longDesc: 'From custom modular kitchens to bespoke false ceiling designs and premium wood finishes, we transform raw structures into luxury experiences.'
   },
   {
     id: 'turnkey-projects',
     title: 'Turnkey Projects',
-    desc: 'Comprehensive end-to-end management from groundbreaking to the final finishing touches.',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop',
-    longDesc: 'Total project responsibility. We take care of everything from planning and procurement to execution and handover, so you can enjoy a hassle-free building experience.'
-  },
-  {
-    id: 'planning-visualization',
-    title: '2D & 3D Visualization',
-    desc: 'Precision 2D Planning Layouts and immersive 3D Visualizations to see your project before it’s built.',
-    image: 'https://images.unsplash.com/photo-1503387762-592f2416460a?q=80&w=1200&auto=format&fit=crop',
-    longDesc: 'Utilizing advanced CAD and 3D rendering tools, our visualization team led by Suraj Kumar helps you walk through your dream project before the first brick is laid.' //
-  },
-  {
-    id: 'pmc-works',
-    title: 'PMC Works',
-    desc: 'Professional Project Management Consultancy ensuring quality, safety, and timely delivery.',
-    image: 'https://images.unsplash.com/photo-1503387762-592f2416460a?q=80&w=1200&auto=format&fit=crop',
-    longDesc: 'Project Management Consultancy (PMC) focuses on quality control, safety audits, and risk management to ensure projects are completed within budget and time.'
+    desc: 'Full-service management from the first brick to the final key handover.',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200',
+    longDesc: 'Groundbreaking to finishing—we take the stress out of building. Our turnkey solutions cover procurement, site supervision, and rigorous quality control.'
   },
   {
     id: 'renovation',
     title: 'Renovation',
-    desc: 'Modernizing existing structures with the latest architectural standards and high-quality materials.',
-    image: 'https://images.unsplash.com/photo-1503387837-b154d5074bd2?q=80&w=1200&auto=format&fit=crop',
-    longDesc: 'Restoring and upgrading old structures with modern architectural elements, strengthening foundations, and giving a fresh aesthetic life to your property.'
+    desc: 'Modernizing existing structures with a focus on structural retrofitting and new aesthetics.',
+    image: 'https://images.unsplash.com/photo-1503387837-b154d5074bd2?q=80&w=1200',
+    longDesc: 'Breathing new life into old spaces. We specialize in structural strengthening (retrofitting) and modernizing outdated architectural layouts.'
+  },
+  {
+    id: 'planning-layout',
+    title: 'Planning Layout 2D',
+    desc: 'Precision architectural mapping and scientific space planning for optimized living.',
+    image: 'https://i.pinimg.com/1200x/9f/16/9c/9f169c8f1a3b40629e5302ace1884db9.jpg',
+    longDesc: 'Technical 2D mapping that maximizes space efficiency and adheres to local building codes, ensuring a smooth approval and construction process.'
+  },
+  {
+    id: '3d-visualization',
+    title: '3D Visualization',
+    desc: 'Immersive 3D renders that allow you to walk through your project before construction.',
+    image: 'https://i.pinimg.com/736x/b7/92/63/b792630e90054df317d01f7d665184e8.jpg',
+    longDesc: 'Our visualization team, led by Suraj Kumar, utilizes high-fidelity rendering to help you visualize every texture, light, and corner of your future project.'
+  },
+  {
+    id: 'pmc-works',
+    title: 'PMC Works',
+    desc: 'Professional Project Management Consultancy focusing on quality, safety, and cost control.',
+    image: 'https://i.pinimg.com/736x/80/85/ce/8085cec34b5927bcfa6d10e5cdc67989.jpg',
+    longDesc: 'Our PMC division specializes in site audits, safety protocols, risk management, and stakeholder coordination to ensure your project is delivered on time.'
   }
 ];
 
@@ -138,7 +152,7 @@ const Services: React.FC = () => {
 
               {/* Action Button */}
               <div className="mt-8">
-                <a href="#contact-us" onClick={() => setSelectedService(null)}>
+                <a href="/contact" onClick={() => setSelectedService(null)}>
                   <button className="w-full bg-[#1A1A1A] text-white py-5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-[#C5A059] transition-all duration-500 rounded-sm">
                     Inquire Now & Get Quote
                   </button>
