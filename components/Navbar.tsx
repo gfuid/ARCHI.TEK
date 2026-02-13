@@ -63,26 +63,67 @@ const Navbar: React.FC = () => {
       {/* Mobile Slide Menu - Fixed Visibility */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            // Added solid white background to fix visibility issue
-            className="fixed inset-0 bg-white z-[105] flex flex-col pt-32 px-10"
-          >
-            <div className="flex flex-col space-y-8 text-4xl font-serif text-[#111111]">
-              <Link to="/" className="border-b border-gray-100 pb-4" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-              <Link to="/services" className="border-b border-gray-100 pb-4" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
-              <Link to="/site-pics" className="border-b border-gray-100 pb-4" onClick={() => setIsMobileMenuOpen(false)}>Site Pics</Link>
-              <Link to="/about" className="border-b border-gray-100 pb-4" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
-              <Link to="/key-role" className="border-b border-gray-100 pb-4" onClick={() => setIsMobileMenuOpen(false)}>Key Role</Link>
-              <Link to="/contact" className="text-[#C5A059] text-sm uppercase font-sans font-bold tracking-[0.2em]" onClick={() => setIsMobileMenuOpen(false)}>Contact Us</Link>
-            </div>
+          <>
+            {/* Background Lock: Isse piche ka content scroll nahi hoga aur gaps nahi dikhenge */}
+            <style>{`body { overflow: hidden; }`}</style>
 
-            <div className="mt-auto mb-12 text-center">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-[#C5A059] font-bold">Led by M.Tech Engineers</p>
-            </div>
-          </motion.div>
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "tween", duration: 0.3 }}
+              // !bg-white gaps ko fill karega aur z-[9999] sabse upar rahega
+              className="fixed inset-0 w-screen h-screen !bg-white z-[9999] flex flex-col"
+            >
+              {/* Mobile Header: Logo and Close Button inside the white menu to hide gaps */}
+              <div className="flex items-center justify-between px-6 h-[80px] border-b border-gray-50">
+                <img src={logo} alt="Logo" className="h-[50px] w-auto" />
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="p-2 text-black"
+                >
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Links Section */}
+              <div className="flex flex-col px-8 pt-10 space-y-6">
+                {[
+                  { name: "Home", path: "/" },
+                  { name: "Services", path: "/services" },
+                  { name: "Site Pics", path: "/site-pics" },
+                  { name: "About", path: "/about" },
+                  { name: "Key Role", path: "/key-role" },
+                ].map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    className="text-4xl font-serif text-[#111111] border-b border-gray-100 pb-4"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+
+                <Link
+                  to="/contact"
+                  className="text-[#C5A059] text-lg uppercase font-sans font-bold tracking-[0.2em] pt-4"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Contact Us
+                </Link>
+              </div>
+
+              {/* Footer */}
+              <div className="mt-auto p-8 bg-gray-50/50">
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[#C5A059] font-bold">
+                  Led by M.Tech Engineers
+                </p>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </nav>
