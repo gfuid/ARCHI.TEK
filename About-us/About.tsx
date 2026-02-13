@@ -82,14 +82,24 @@ const About: React.FC = () => {
                 </div>
 
                 {/* Core Support Staff */}
+                {/* Core Support Staff */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-gray-100 pt-16">
                     {OTHER_STAFF.map((staff, i) => (
-                        <div key={i} className="text-center md:text-left group">
-                            <p className="text-[10px] font-bold text-houzz-gold uppercase tracking-widest mb-1 group-hover:translate-x-2 transition-transform">{staff.role}</p>
-                            <h5 className="text-xl font-serif text-houzz-dark">{staff.name}</h5>
+                        <div key={i} className="flex flex-col text-center md:text-left group">
+                            {/* Name First - Bold and Large */}
+                            <h5 className="text-xl font-serif text-houzz-dark mb-1">
+                                {staff.name}
+                            </h5>
+
+                            {/* Role Second - Gold and Small */}
+                            <p className="text-[10px] font-bold text-houzz-gold uppercase tracking-widest transition-transform duration-300 group-hover:translate-x-2">
+                                {staff.role}
+                            </p>
                         </div>
                     ))}
                 </div>
+
+
 
             </div>
         </section>

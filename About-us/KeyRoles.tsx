@@ -36,7 +36,7 @@ const KeyRoles: React.FC = () => {
   ];
 
   return (
-    <section id="key-roles" className="py-24 bg-[#F8F7F2]">
+    <section id="key-roles" className="py-24 bg-[#F8F7F2] mt-[80px]">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header Section */}

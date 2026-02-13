@@ -58,7 +58,7 @@ const ALL_SERVICES = [
 
 const ServicesPage: React.FC = () => {
   return (
-    <div className="bg-white pt-32">
+    <div className="bg-white pt-40">
       {/* Header Section */}
       <section className="px-6 mb-24">
         <div className="max-w-7xl mx-auto">

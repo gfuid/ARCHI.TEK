@@ -4,6 +4,13 @@ import { ArrowLeft, ChevronRight } from 'lucide-react';
 
 const SERVICES = [
   {
+    id: 'pmc-works',
+    title: 'PMC Works',
+    desc: 'Professional Project Management Consultancy focusing on quality, safety, and cost control.',
+    image: 'https://i.pinimg.com/736x/80/85/ce/8085cec34b5927bcfa6d10e5cdc67989.jpg',
+    longDesc: 'Specialized site audits, safety protocols, and risk management led by our engineering team to ensure timely project delivery.'
+  },
+  {
     id: 'residential-construction',
     title: 'Residential Construction',
     desc: 'Bespoke luxury home building with a focus on structural stability and high-end finishes.',
@@ -52,13 +59,7 @@ const SERVICES = [
     image: 'https://i.pinimg.com/736x/b7/92/63/b792630e90054df317d01f7d665184e8.jpg',
     longDesc: 'High-fidelity rendering by Suraj Kumar that visualizes every texture and light detail before a single brick is laid.'
   },
-  {
-    id: 'pmc-works',
-    title: 'PMC Works',
-    desc: 'Professional Project Management Consultancy focusing on quality, safety, and cost control.',
-    image: 'https://i.pinimg.com/736x/80/85/ce/8085cec34b5927bcfa6d10e5cdc67989.jpg',
-    longDesc: 'Specialized site audits, safety protocols, and risk management led by our engineering team to ensure timely project delivery.'
-  }
+
 ];
 
 const Services: React.FC = () => {
