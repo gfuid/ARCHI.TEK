@@ -21,35 +21,38 @@ const ContactSection: React.FC = () => {
             </h2>
 
             <div className="space-y-10 mt-12">
-              {/* Engineering Badge from Team Profile */}
+              {/* Engineering Badge */}
               <div className="flex items-start space-x-6 border-l border-[#C5A059]/30 pl-6">
                 <div>
                   <h4 className="text-[#C5A059] font-bold uppercase tracking-widest text-[10px] mb-2">Technical Consultation</h4>
                   <p className="text-sm text-gray-500 leading-relaxed">
-                    Discuss your project with our M.Tech Structural Engineering team for stability and cost optimization.
+                    Discuss your project with Er. Ashish Bhargav or Er. Sachin Kumar for expert structural stability and cost optimization.
                   </p>
                 </div>
               </div>
 
-              {/* Direct Details with darker text for visibility */}
+              {/* Direct Details with Panipat Information */}
               <div className="space-y-6">
                 <div>
                   <p className="text-gray-400 text-[10px] uppercase tracking-widest mb-1 font-bold">Office Location</p>
-                  <p className="text-lg font-serif text-[#111111]">Sector 23, Gurugram, Haryana</p>
+                  <p className="text-lg font-serif text-[#111111]">H.No-646 Sector 18 HUDA, Panipat</p>
                 </div>
                 <div>
-                  <p className="text-gray-400 text-[10px] uppercase tracking-widest mb-1 font-bold">Direct Line</p>
-                  <p className="text-2xl font-serif text-[#C5A059]">+91 999 000 0000</p>
+                  <p className="text-gray-400 text-[10px] uppercase tracking-widest mb-1 font-bold">Direct Lines</p>
+                  <div className="space-y-1">
+                    <p className="text-2xl font-serif text-[#C5A059]">+91 99922 50502</p>
+                    <p className="text-2xl font-serif text-[#C5A059]">+91 74048 02006</p>
+                  </div>
                 </div>
                 <div>
                   <p className="text-gray-400 text-[10px] uppercase tracking-widest mb-1 font-bold">Official Inquiry</p>
-                  <p className="text-lg font-serif text-[#111111]">info@deisignhouzz.com</p>
+                  <p className="text-lg font-serif text-[#111111]">designhouzz23@gmail.com</p>
                 </div>
               </div>
             </div>
           </motion.div>
 
-          {/* Right Side: Professional Inquiry Form with subtle shadow */}
+          {/* Right Side: Professional Inquiry Form */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -60,17 +63,17 @@ const ContactSection: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Full Name</label>
-                  <input type="text" className="w-full border-b border-gray-200 py-3 focus:border-[#C5A059] outline-none transition-colors bg-transparent text-sm" placeholder="John Doe" />
+                  <input type="text" name="full_name" className="w-full border-b border-gray-200 py-3 focus:border-[#C5A059] outline-none transition-colors bg-transparent text-sm" placeholder="John Doe" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Phone Number</label>
-                  <input type="tel" className="w-full border-b border-gray-200 py-3 focus:border-[#C5A059] outline-none transition-colors bg-transparent text-sm" placeholder="+91 ..." />
+                  <input type="tel" name="phone_number" className="w-full border-b border-gray-200 py-3 focus:border-[#C5A059] outline-none transition-colors bg-transparent text-sm" placeholder="+91 ..." />
                 </div>
               </div>
 
               <div className="space-y-2">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Service Required</label>
-                <select className="w-full border-b border-gray-200 py-3 focus:border-[#C5A059] outline-none bg-transparent cursor-pointer font-medium text-sm text-[#111111]">
+                <select name="service_type" className="w-full border-b border-gray-200 py-3 focus:border-[#C5A059] outline-none bg-transparent cursor-pointer font-medium text-sm text-[#111111]">
                   <option>Residential Construction</option>
                   <option>Commercial Construction</option>
                   <option>Interior & Fit-out</option>
@@ -82,16 +85,16 @@ const ContactSection: React.FC = () => {
 
               <div className="space-y-2">
                 <label className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Project Brief</label>
-                <textarea rows={4} className="w-full border border-gray-200 p-4 focus:border-[#C5A059] outline-none transition-colors resize-none bg-white text-sm" placeholder="Tell us about your project location and requirements..."></textarea>
+                <textarea name="message" rows={4} className="w-full border border-gray-200 p-4 focus:border-[#C5A059] outline-none transition-colors resize-none bg-white text-sm" placeholder="Tell us about your project requirements..."></textarea>
               </div>
 
               <Magnetic strength={0.2}>
-                <button className="w-full bg-[#111111] text-white py-5 font-bold uppercase tracking-[0.3em] text-[10px] hover:bg-[#C5A059] transition-all duration-500 rounded-sm">
+                <button type="submit" className="w-full bg-[#111111] text-white py-5 font-bold uppercase tracking-[0.3em] text-[10px] hover:bg-[#C5A059] transition-all duration-500 rounded-sm">
                   Send Inquiry Request
                 </button>
               </Magnetic>
               <p className="text-center text-[9px] text-gray-400 uppercase tracking-widest mt-4">
-                Quality • Safety • Stability
+                Trust • Stability • Precision
               </p>
             </form>
           </motion.div>

@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-[#F8F7F2] text-[#1a1a1a] pt-24 pb-12 overflow-hidden relative border-t border-black/5">
-      {/* Subtle Glow Accent - Adjusted opacity for light theme */}
+      {/* Subtle Glow Accent */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#C5A059]/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
               Led by M.Tech Structural Engineers
             </p>
             <p className="text-black/60 max-w-sm leading-relaxed text-sm italic border-l border-[#C5A059]/40 pl-4">
-              "Engineering stability with 10+ years of excellence in construction and luxury interior works."
+              "Evokes Trust & Stability with 10+ years of excellence in construction and luxury interior works."
             </p>
           </div>
 
@@ -76,20 +76,21 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Contact Strip & Socials */}
+        {/* Contact Strip & Socials - Updated with Card Details */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-12 border-y border-black/5 mb-12">
           <div className="flex flex-col">
             <span className="text-[10px] uppercase text-black/40 tracking-widest mb-2 font-bold">Office Address</span>
-            <p className="text-sm text-black/80">Sector 23, Gurugram, Haryana, India</p>
+            <p className="text-sm text-black/80">H.No-646 Sector 18 HUDA,<br />Panipat, Haryana</p>
           </div>
           <div className="flex flex-col">
-            <span className="text-[10px] uppercase text-black/40 tracking-widest mb-2 font-bold">Direct Line</span>
-            <p className="text-xl font-serif text-[#C5A059]">+91 999 000 0000</p>
+            <span className="text-[10px] uppercase text-black/40 tracking-widest mb-2 font-bold">Direct Lines</span>
+            <p className="text-lg font-serif text-[#C5A059]">+91 99922 50502</p>
+            <p className="text-lg font-serif text-[#C5A059]">+91 74048 02006</p>
           </div>
           <div className="flex flex-col">
             <span className="text-[10px] uppercase text-black/40 tracking-widest mb-2 font-bold">Official Inquiries</span>
-            <a href="mailto:info@deisignhouzz.com" className="text-sm text-black/80 hover:text-[#C5A059] transition-colors underline decoration-[#C5A059]/30 underline-offset-4">
-              info@deisignhouzz.com
+            <a href="mailto:designhouzz23@gmail.com" className="text-sm text-black/80 hover:text-[#C5A059] transition-colors underline decoration-[#C5A059]/30 underline-offset-4">
+              designhouzz23@gmail.com
             </a>
           </div>
         </div>
