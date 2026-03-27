@@ -8,9 +8,10 @@ import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
 import Marquee from './components/Marquee';
 import WhyChooseUs from './components/WhyChooseUs';
-import Team from './components/Team';
 import Stats from './components/Stats';
 import ContactSection from './components/ContactSection'
+import SitePics from './components/SitePics'
+
 // Naye folders se components
 import Portfoliositepic from './sitepic/Portfolio';
 import AboutUsSection from './About-us/About';
@@ -36,7 +37,7 @@ const App: React.FC = () => {
               <Stats />
               <Process />
               <WhyChooseUs />
-              <Team />
+              <SitePics />
               <ContactSection />
             </main>
           } />
