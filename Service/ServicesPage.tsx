@@ -22,31 +22,45 @@ import in4 from '../assets/Interior/in4.jpeg';
 import in5 from '../assets/Interior/in5.jpeg';
 import in6 from '../assets/Interior/in6.jpeg';
 import in7 from '../assets/Interior/in7.jpeg';
+import in8 from '../assets/Interior/in8.png';
+import in9 from '../assets/Interior/in9.png';
 
 import i1 from '../assets/i1.png';
 import i2 from '../assets/i2.png';
 
+import s1 from '../assets/SitePics/s1.jpeg';
+import s2 from '../assets/SitePics/s2.jpeg';
+import s3 from '../assets/SitePics/s3.jpeg';
+import s4 from '../assets/SitePics/s4.jpeg';
+
 const ALL_SERVICES = [
+  {
+    title: "Interior Work",
+    icon: <Paintbrush className="w-6 h-6" />,
+    desc: "Turnkey interior fit-outs with premium finishes and modular solutions.",
+    features: ["Modular Kitchens", "False Ceilings", "Bespoke Furniture"],
+    images: [in8, in9, in1, in2, in3, in4, in5, in6, in7],
+  },
   {
     title: "Residential Construction",
     icon: <Home className="w-6 h-6" />,
     desc: "Luxury home building with structural stability led by M.Tech Engineers.",
     features: ["Foundation Engineering", "Superstructure", "Luxury Finishing"],
-    images: [i1, i2],
+    images: [c1, c2, c3, c4, c5, c6, c7, c8, s1, s2, s3, s4],
   },
   {
     title: "Commercial Construction",
     icon: <Building2 className="w-6 h-6" />,
     desc: "High-performance structures for corporate hubs and retail spaces.",
     features: ["Large Span Structures", "Modern Glazing", "Rapid Deployment"],
-    images: [c1, c2, c3, c4, c5, c6, c7, c8],
+    images: [],
   },
   {
-    title: "Interior Work",
-    icon: <Paintbrush className="w-6 h-6" />,
-    desc: "Turnkey interior fit-outs with premium finishes and modular solutions.",
-    features: ["Modular Kitchens", "False Ceilings", "Bespoke Furniture"],
-    images: [in1, in2, in3, in4, in5, in6, in7],
+    title: "PMC Works",
+    icon: <Briefcase className="w-6 h-6" />,
+    desc: "Professional Project Management Consultancy for complete operational control.",
+    features: ["Cost Management", "Risk Assessment", "Quality Control"],
+    images: [], // Add PMC specific image variables here
   },
   {
     title: "Turnkey Projects",
@@ -74,13 +88,6 @@ const ALL_SERVICES = [
     icon: <Box className="w-6 h-6" />,
     desc: "High-fidelity 3D renders to walk through your vision before building.",
     features: ["Photorealistic Renders", "Walkthroughs", "Material Simulation"],
-    images: [],
-  },
-  {
-    title: "PMC Works",
-    icon: <Briefcase className="w-6 h-6" />,
-    desc: "Professional Project Management Consultancy for complete control.",
-    features: ["Cost Management", "Risk Assessment", "Quality Control"],
     images: [],
   },
 ];

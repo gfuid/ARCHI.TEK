@@ -11,6 +11,7 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Stats from './components/Stats';
 import ContactSection from './components/ContactSection'
 import SitePics from './components/SitePics'
+import WhatsAppButton from './components/WhatsAppButton';
 
 // Naye folders se components
 import Portfoliositepic from './sitepic/Portfolio';
@@ -50,6 +51,7 @@ const App: React.FC = () => {
           <Route path="/key-role" element={<KeyRoles />} />
 
         </Routes>
+        <WhatsAppButton />
 
         <Footer />
       </div>

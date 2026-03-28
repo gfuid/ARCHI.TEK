@@ -94,7 +94,7 @@ const Navbar: React.FC = () => {
                   { name: "Home", path: "/" },
                   { name: "Services", path: "/services" },
                   { name: "Site Pics", path: "/site-pics" },
-                  { name: "About", path: "/about" },
+                  { name: "About-US", path: "/about" },
                   { name: "Key Role", path: "/key-role" },
                 ].map((link) => (
                   <Link
