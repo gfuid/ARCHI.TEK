@@ -29,13 +29,35 @@ import in12 from '../assets/Interior/in12.png';
 import in13 from '../assets/Interior/in13.png';
 import in14 from '../assets/Interior/in14.png';
 
-import i1 from '../assets/i1.png';
-import i2 from '../assets/i2.png';
 
 import s1 from '../assets/SitePics/s1.jpeg';
 import s2 from '../assets/SitePics/s2.jpeg';
 import s3 from '../assets/SitePics/s3.jpeg';
 import s4 from '../assets/SitePics/s4.jpeg';
+
+
+import threeD from '../assets/3d.jpeg'; // Changed '3d' to 'threeD'
+
+
+
+// Interior 1 Folder Imports
+import i1 from '../assets/interior1/i1.jpeg';
+import i2 from '../assets/interior1/i2.jpeg';
+import i3 from '../assets/interior1/i3.jpeg';
+import i4 from '../assets/interior1/i4.jpeg';
+import i5 from '../assets/interior1/i5.jpeg';
+import i6 from '../assets/interior1/i6.jpeg';
+import i7 from '../assets/interior1/i7.jpeg';
+import i8 from '../assets/interior1/i8.jpeg';
+import i9 from '../assets/interior1/i9.jpeg';
+import i10 from '../assets/interior1/i10.jpeg';
+import i11 from '../assets/interior1/i11.jpeg';
+import i12 from '../assets/interior1/i12.jpeg';
+import i13 from '../assets/interior1/i13.jpeg';
+import i14 from '../assets/interior1/i14.jpeg';
+
+// Fix for the 3D image (cannot start with a number)
+
 
 const ALL_SERVICES = [
   {
@@ -43,7 +65,7 @@ const ALL_SERVICES = [
     icon: <Paintbrush className="w-6 h-6" />,
     desc: "Turnkey interior fit-outs with premium finishes and modular solutions.",
     features: ["Modular Kitchens", "False Ceilings", "Bespoke Furniture"],
-    images: [in8, in9, in11, in12, in13, in14],
+    images: [i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, in8, in9, in11, in12, in13, in14],
   },
   {
     title: "Residential Construction",
@@ -57,7 +79,14 @@ const ALL_SERVICES = [
     icon: <Building2 className="w-6 h-6" />,
     desc: "High-performance structures for corporate hubs and retail spaces.",
     features: ["Large Span Structures", "Modern Glazing", "Rapid Deployment"],
-    images: [in1, in3, in5, in6, in7],
+    images: [in6, in7],
+  },
+  {
+    title: "3D Visualization",
+    icon: <Box className="w-6 h-6" />,
+    desc: "High-fidelity 3D renders to walk through your vision before building.",
+    features: ["Photorealistic Renders", "Walkthroughs", "Material Simulation"],
+    images: [threeD],
   },
   {
     title: "PMC Works",
@@ -87,13 +116,7 @@ const ALL_SERVICES = [
     features: ["Vastu Compliance", "Code Approval", "Space Optimization"],
     images: [],
   },
-  {
-    title: "3D Visualization",
-    icon: <Box className="w-6 h-6" />,
-    desc: "High-fidelity 3D renders to walk through your vision before building.",
-    features: ["Photorealistic Renders", "Walkthroughs", "Material Simulation"],
-    images: [],
-  },
+
 ];
 
 // ── LIGHTBOX ──────────────────────────────────────────────────────────────────
