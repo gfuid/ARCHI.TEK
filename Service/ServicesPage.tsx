@@ -24,6 +24,10 @@ import in6 from '../assets/Interior/in6.jpeg';
 import in7 from '../assets/Interior/in7.jpeg';
 import in8 from '../assets/Interior/in8.png';
 import in9 from '../assets/Interior/in9.png';
+import in11 from '../assets/Interior/in11.png'
+import in12 from '../assets/Interior/in12.png';
+import in13 from '../assets/Interior/in13.png';
+import in14 from '../assets/Interior/in14.png';
 
 import i1 from '../assets/i1.png';
 import i2 from '../assets/i2.png';
@@ -39,7 +43,7 @@ const ALL_SERVICES = [
     icon: <Paintbrush className="w-6 h-6" />,
     desc: "Turnkey interior fit-outs with premium finishes and modular solutions.",
     features: ["Modular Kitchens", "False Ceilings", "Bespoke Furniture"],
-    images: [in8, in9, in1, in2, in3, in4, in5, in6, in7],
+    images: [in8, in9, in11, in12, in13, in14],
   },
   {
     title: "Residential Construction",
@@ -53,7 +57,7 @@ const ALL_SERVICES = [
     icon: <Building2 className="w-6 h-6" />,
     desc: "High-performance structures for corporate hubs and retail spaces.",
     features: ["Large Span Structures", "Modern Glazing", "Rapid Deployment"],
-    images: [],
+    images: [in1, in3, in5, in6, in7],
   },
   {
     title: "PMC Works",
