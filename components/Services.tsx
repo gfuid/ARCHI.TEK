@@ -4,11 +4,11 @@ import { ArrowLeft, ChevronRight } from 'lucide-react';
 
 const SERVICES = [
   {
-    id: 'pmc-works',
-    title: 'PMC Works',
-    desc: 'Professional Project Management Consultancy focusing on quality, safety, and cost control.',
-    image: 'https://i.pinimg.com/736x/80/85/ce/8085cec34b5927bcfa6d10e5cdc67989.jpg',
-    longDesc: 'Specialized site audits, safety protocols, and risk management led by our engineering team to ensure timely project delivery.'
+    id: 'interior-work',
+    title: 'Interior Work',
+    desc: 'Premium interior fit-outs and turnkey finishing for residential and commercial interiors.',
+    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200',
+    longDesc: 'Bespoke interior solutions including modular kitchens, custom lighting design, and high-end wood finishes.'
   },
   {
     id: 'residential-construction',
@@ -25,11 +25,18 @@ const SERVICES = [
     longDesc: 'We deliver commercial spaces that evoke trust. Our team handles complex glazing and large-span structural elements with rapid deployment.'
   },
   {
-    id: 'interior-work',
-    title: 'Interior Work',
-    desc: 'Premium interior fit-outs and turnkey finishing for residential and commercial interiors.',
-    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200',
-    longDesc: 'Bespoke interior solutions including modular kitchens, custom lighting design, and high-end wood finishes.'
+    id: '3d-visualization',
+    title: '3D Visualization',
+    desc: 'Immersive 3D renders that allow you to walk through your project before construction.',
+    image: 'https://i.pinimg.com/736x/b7/92/63/b792630e90054df317d01f7d665184e8.jpg',
+    longDesc: 'High-fidelity rendering by Suraj Kumar that visualizes every texture and light detail before a single brick is laid.'
+  },
+  {
+    id: 'pmc-works',
+    title: 'PMC Works',
+    desc: 'Professional Project Management Consultancy focusing on quality, safety, and cost control.',
+    image: 'https://i.pinimg.com/736x/80/85/ce/8085cec34b5927bcfa6d10e5cdc67989.jpg',
+    longDesc: 'Specialized site audits, safety protocols, and risk management led by our engineering team to ensure timely project delivery.'
   },
   {
     id: 'turnkey-projects',
@@ -51,13 +58,6 @@ const SERVICES = [
     desc: 'Precision architectural mapping and scientific space planning for optimized living.',
     image: 'https://i.pinimg.com/1200x/9f/16/9c/9f169c8f1a3b40629e5302ace1884db9.jpg',
     longDesc: 'Technical 2D mapping adhering to local building codes to ensure space efficiency and smooth project approval.'
-  },
-  {
-    id: '3d-visualization',
-    title: '3D Visualization',
-    desc: 'Immersive 3D renders that allow you to walk through your project before construction.',
-    image: 'https://i.pinimg.com/736x/b7/92/63/b792630e90054df317d01f7d665184e8.jpg',
-    longDesc: 'High-fidelity rendering by Suraj Kumar that visualizes every texture and light detail before a single brick is laid.'
   },
 
 ];
