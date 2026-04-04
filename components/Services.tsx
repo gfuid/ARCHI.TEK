@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ChevronRight } from 'lucide-react';
 
+
 const SERVICES = [
   {
     id: 'interior-work',

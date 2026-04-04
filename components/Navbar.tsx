@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
           <div className="hidden md:flex items-center space-x-10 text-[14px] font-bold tracking-[0.2em] uppercase">
             <Link to="/services" className="text-black hover:text-[#C5A059] transition-colors">Services</Link>
             <Link to="/site-pics" className="text-black hover:text-[#C5A059] transition-colors">Site Pics</Link>
-            <Link to="/about" className="text-black hover:text-[#C5A059] transition-colors">About</Link>
+            <Link to="/about" className="text-black hover:text-[#C5A059] transition-colors">About-US</Link>
             <Link to="/key-role" className="text-black hover:text-[#C5A059] transition-colors">Key Role</Link>
           </div>
 
